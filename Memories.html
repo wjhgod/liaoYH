@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="css/fullPage-3.1.2.min.css">
+    <link rel="stylesheet" href="css/memories.css">
+</head>
+<style>
+    .play-button {
+        background-color: #FF69B4; /* 粉色 */
+        color: #FFF; /* 白色 */
+        padding: 10px 20px;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+
+    .play-button:hover {
+        background-color: #FFC0CB; /* 淡粉色 */
+        color: #000; /* 黑色 */
+    }
+    p{
+        color: #ff7eb9;
+        font-size: 1.2em;
+    }
+    .ly-txt11,.ly-txt13{
+        color: #ff7eb9;
+        font-size: 1.6em;
+    }
+    .ly-txt12{
+        font-size: 1.6em;
+        color: #ff7eb9;
+    }
+</style>
+<body>
+<audio id="myAudio" src="music/凌川夏 - 我的纸飞机.mp3" autoplay="autoplay" loop="loop"></audio>
+<div class="bgcolor">
+    <button class="play-button" onclick="playMusic()">播放音乐</button>
+    <div style="z-index:100;" id="dowebok">
+        <!--第一屏-->
+        <div class="section">
+            <div class="ly-box01">
+                <div class="ly-txt01">
+                    <p class="ly-stxt01">祝今日女主角艳华：</p>
+                    <p class="ly-stxt02">生日快乐，心想事成！</p>
+                    <p class="ly-stxt03">每天睡到自然醒，数钱数到手抽筋</p>
+                    <p class="ly-stxt04">这一年快乐成功，来年生日更美好</p>
+                    <p class="ly-stxt05">一切顺心，安逸！</p>
+                </div>
+            </div>
+        </div>
+
+        <!--第二屏-->
+
+        <div class="section">
+            <div class="timeline"></div>
+            <div class="timepoint11"></div>
+            <div class="ly-box11">
+                <div class="ly-txt11">
+                    2023-12-29
+                </div>
+                <div class="ly-txt12">
+                    Hi!廖艳华今天是你生日哦！
+                </div>
+                <div class="ly-imgbox11">
+                    <img class="ly-img11" src="img/2014.11.14-1.jpg">
+                </div>
+            </div>
+            <div class="ly-triangle11"></div>
+
+            <div class="ly-box12">
+                <div class="ly-txt13">
+                    2023-12-29
+                </div>
+                <div class="ly-txt14">
+                    <p>在这个时刻</p>
+                    <p>首先，希望你每天开开心心，把烦恼统统忘掉</p>
+                    <p>接下来会去好多好玩的地方，咋玩都不会累</p>
+                    <p>吃好多好吃的，怎么吃都不长胖，嘿嘿！！</p>
+                    <p>最后，当然还是希望你的烦恼能统统忘掉啦哈哈哈</p>
+                </div>
+            </div>
+            <div class="ly-triangle12"></div>
+        </div>
+</div>
+<script>
+    function playMusic() {
+      var audio = document.getElementById("myAudio");
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+    </script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/fullPage-3.1.2.min.js"></script>
+<script src="js/diy.js"></script>
+</body>
+</html>
